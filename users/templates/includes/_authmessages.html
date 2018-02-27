@@ -1,0 +1,7 @@
+{% if auth_error %}
+  <div class="alert alert-danger">{{ auth_error }}</div>
+{% endif %}
+
+{% if auth_success %}
+  <div class="alert alert-success">{{ auth_success }}</div>
+{% endif %}
