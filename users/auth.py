@@ -72,5 +72,7 @@ def signup():
                 return render_template('signup.html',auth_error=error)
         else:
             current_app.logger.info('Input validation failed')
+            error = "All input is required"
+            return render_template('signup.html',auth_error=error)
 
     return render_template('signup.html')
