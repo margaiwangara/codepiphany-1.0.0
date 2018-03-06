@@ -7,6 +7,10 @@ from . import db
 user_auth = Blueprint('user_auth',__name__,template_folder="templates")
 
 #login route
+@user_auth.route('/')
+def index():
+    return render_template('index.html')
+    
 @user_auth.route('/login',methods=['POST','GET'])
 def login():
     return render_template('login.html')
